@@ -1,3 +1,3 @@
 require('./sass/main.sass');
 
-jQuery('.test').text('jQuery is live:)');
+$('.test').text('jQuery is live:)');
