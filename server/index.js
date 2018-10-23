@@ -1,7 +1,6 @@
-// index.js
 
 var faker = require('faker')
-faker.locale = 'it';
+faker.locale = 'en';
 
 function generateData() {
     const data = {

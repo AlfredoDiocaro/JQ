@@ -56,4 +56,5 @@ gen
 /dist/
 
 .DS_Store
+.htaccess
 
