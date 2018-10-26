@@ -25,7 +25,7 @@ module.exports = function (env) {
         resolve: {
             modules: [
                 path.join(__dirname, "src"),
-                "node_modules"
+                "node_modules",
             ]
         },
 
