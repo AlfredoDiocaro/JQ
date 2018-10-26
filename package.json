@@ -11,14 +11,15 @@
     "json-server": "json-server ./server/index.js -p 3001"
   },
   "license": "",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  },
   "devDependencies": {
     "@types/jquery": "^3.2.16",
     "@types/node": "^8.0.50",
     "@types/webpack": "^3.8.0",
     "@types/webpack-merge": "^4.1.0",
     "autoprefixer": "^7.1.6",
-    "bootstrap": "^4.0.0-beta.2",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "extract-loader": "^1.0.1",

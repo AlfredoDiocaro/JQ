@@ -3,11 +3,14 @@ $(document).ready(function () {
 
     var eseguiPromessa = function (valore) {
         var prom = new Promise(function (resolve, reject) {
-            if (valore == "Sergio") {
-                var data = "SONO SERGIO";
+            if (valore == "Alfredo") {
+                var data = {
+                    user: "Alfredo",
+                    age: "27"
+                };
                 resolve(data);
             } else {
-                var error = new Error("NON MI CHIAMO SERGIO!");
+                var error = new Error("NON MI CHIAMO Alfredo! SONO: " + valore);
                 reject(error);
             }
         });
@@ -15,15 +18,21 @@ $(document).ready(function () {
     }
 
     $('.mioBottone').on('click', function () {
-
-        let promessa = eseguiPromessa();
+        let val = $('#valore').val();
+        if(val == ''){
+            alert("Inserire una stringa");
+            return;
+        }
+        let promessa = eseguiPromessa(val);
 
         promessa.then(function (data) {
             console.log(data);
+            console.log("THEN: PROMESSA ANDATA A BUON FINE");
         }).catch(function (e) {
-            console.log(e)
+            console.log(e);
+            console.log("CATCH: PROMESSA ANDATA MALE");
         }).finally(function () {
-            console.log("END PROMISE");
+            console.log("FINALLY: END PROMISE");
         });
     })
 })
