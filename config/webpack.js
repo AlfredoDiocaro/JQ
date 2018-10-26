@@ -19,7 +19,7 @@ module.exports = function (env) {
 
         entry: {
             'vendor': './src/vendor.ts',
-            'app': './src/main.ts'
+            'app': './src/main.js'
         },
 
         resolve: {
