@@ -26,10 +26,6 @@ export class HeaderTPL {
 
         $('.feat').on('click',function(){
             let home = new HomeSect();
-            let obj = {
-                nome: "alfredo",
-                eta: 27
-            }
             home.loadHome();
             console.log(home);
         });
