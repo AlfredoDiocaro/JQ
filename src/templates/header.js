@@ -1,4 +1,6 @@
 import{ HomeSect } from './homeSect'
+import { VeicoliSect } from './veicoliSect'
+
 export class HeaderTPL {
     constructor() {
         console.log("Loading Header");
@@ -14,7 +16,7 @@ export class HeaderTPL {
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="JavaScript:void(0);">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link feat" href="JavaScript:void(0);">Features</a>
+                <a class="nav-item nav-link persone" href="JavaScript:void(0);">Pagina get persone</a>
                 <a class="nav-item nav-link veicoli" href="JavaScript:void(0);">Veicoli</a>
                 <b class="giveDate nav-item nav-link disabled">Tell me Date</b>
                 <b class="nav-item disabled nav-link">${date}</b>
@@ -24,10 +26,9 @@ export class HeaderTPL {
         </nav>
         `);
 
-        $('.feat').on('click',function(){
+        $('.persone').on('click',function(){
             let home = new HomeSect();
             home.loadHome();
-            console.log(home);
         });
 
         $('.giveDate').on('click',function(){
@@ -36,7 +37,8 @@ export class HeaderTPL {
         });
 
         $('.veicoli').on('click',function(){
-            //Creare classe veicoli e iniettarla nel container 
+            let veic = new VeicoliSect();
+            veic.loadVeic();
         });
     }
 }
