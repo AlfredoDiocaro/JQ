@@ -1,4 +1,4 @@
-
+import{ HomeSect } from './homeSect'
 export class HeaderTPL {
     constructor() {
         console.log("Loading Header");
@@ -24,5 +24,19 @@ export class HeaderTPL {
         </nav>
         `);
 
+        $('.feat').on('click',function(){
+            let home = new HomeSect();
+            let obj = {
+                nome: "alfredo",
+                eta: 27
+            }
+            home.loadHome();
+            console.log(home);
+        });
+
+        $('.giveDate').on('click',function(){
+            console.log(date);
+            $('.year').text(new Date().getFullYear());
+        });
     }
 }

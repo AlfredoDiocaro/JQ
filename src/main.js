@@ -1,6 +1,4 @@
-//import * as main from './scripts/index'
 import { HeaderTPL } from './templates/header'
-import handlers from './scripts/handlers'
 import 'bootstrap'
 
 $(window).on("load",function(){
@@ -8,10 +6,6 @@ $(window).on("load",function(){
 })
 
 new HeaderTPL().loadHead();
-
-handlers.dateFunction();
-handlers.homeLoaderFunction();
-
 
 window.addEventListener("popstate", function (e) {
     console.log(window.history.state);
