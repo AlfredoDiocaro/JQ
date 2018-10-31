@@ -9,7 +9,7 @@ export class HomeSect {
 
     loadHome() {
 
-        $('.container').append(`
+        $('.container').html(`
             <div class="row">
                 <div class="col-12">
                     <button class="fetchPeople">FETCH PERSONE</button>

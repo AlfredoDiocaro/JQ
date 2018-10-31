@@ -15,7 +15,7 @@ export class HeaderTPL {
                 <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="JavaScript:void(0);">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link feat" href="JavaScript:void(0);">Features</a>
-                <a class="nav-item nav-link price" href="JavaScript:void(0);">Pricing</a>
+                <a class="nav-item nav-link veicoli" href="JavaScript:void(0);">Veicoli</a>
                 <b class="giveDate nav-item nav-link disabled">Tell me Date</b>
                 <b class="nav-item disabled nav-link">${date}</b>
                 <b class="year nav-item disabled nav-link"></b>
@@ -33,6 +33,10 @@ export class HeaderTPL {
         $('.giveDate').on('click',function(){
             console.log(date);
             $('.year').text(new Date().getFullYear());
+        });
+
+        $('.veicoli').on('click',function(){
+            //Creare classe veicoli e iniettarla nel container 
         });
     }
 }
